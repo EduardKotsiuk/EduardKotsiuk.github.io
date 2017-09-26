@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Styles -->
+    <!-- Scripts -->
+
+</head>
+<body>
+<div id="app">
+
+</div>
+<!--<div class="main">-->
+    <!--<div class="container">-->
+        <!--<img src="image.png" id="main_image">-->
+    <!--</div>-->
+<!--</div>-->
+<div data-zoom="large.jpg" class="zoom">
+    <img src="image.png" id="main_image">
+</div>
+
+
+<div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="Mobile-friendly-jQuery-Image-Magnifier-Plugin-imagezoom/jquery.imagezoom.js"></script>
+<script>
+    $(document).ready(function (){
+//        $('#main_image').click(function (e) { //Default mouse Position
+//            let posX = $(this).offset().left,
+//                posY = $(this).offset().top;
+//            alert((e.pageX - posX) + ' , ' + (e.pageY - posY));
+//        });
+        $('.zoom').zoom();
+
+    } )
+</script>
+<link rel="stylesheet" href="Mobile-friendly-jQuery-Image-Magnifier-Plugin-imagezoom/style.css">
+
+<style>
+    #main_image{
+        width: 100%;
+    }
+    .zoom {
+
+        max-width: 100%;
+        overflow: hidden;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .jsZoomTouch:after {
+        content: 'Pinch to Zoom';
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+</style>
+
+</body>
+</html>
